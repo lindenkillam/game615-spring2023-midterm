@@ -7,7 +7,7 @@ using TMPro;
 public class UI : MonoBehaviour
 {
     public GameManager gm;
-    //public TextMeshProUGUI gradeDisplay;
+    //public TextMeshProUGUI gradeDisplay; //Can't get these to work right now for some reason
     //public TextMeshProUGUI winDisplay;
     [SerializeField] Text gradeDisplay;
     [SerializeField] Text winDisplay;
