@@ -2,4 +2,6 @@
 
 By Linden Killam<br>
 
+Use the arrow keys to steer the player!
+
 Paper by Poly by Google [CC-BY] via Poly Pizza<br>
