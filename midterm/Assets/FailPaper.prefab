@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -5508497552499165302}
   m_Layer: 0
   m_Name: FailPaper
-  m_TagString: Untagged
+  m_TagString: failPaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
