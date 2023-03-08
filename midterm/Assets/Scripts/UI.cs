@@ -7,8 +7,10 @@ using TMPro;
 public class UI : MonoBehaviour
 {
     public GameManager gm;
-    public TextMeshProUGUI gradeDisplay;
-    public TextMeshProUGUI winDisplay;
+    //public TextMeshProUGUI gradeDisplay;
+    //public TextMeshProUGUI winDisplay;
+    [SerializeField] Text gradeDisplay;
+    [SerializeField] Text winDisplay;
     [SerializeField] Text timerDisplay;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class UI : MonoBehaviour
     void Update()
     {
         timerDisplay.text = gm.timer.ToString ("0");
-        gradeDisplay.text = "Grade: " + gm.grade;
+        gradeDisplay.text = "Grade: " + gm.grade.ToString ("0");
 
         if(gm.timer <= 0)
         {
