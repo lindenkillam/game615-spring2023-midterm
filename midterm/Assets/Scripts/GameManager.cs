@@ -5,14 +5,12 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public int totalMedkits;
-    public int playerScore = 0;
-    public int enemyScore = 0;
+    public float timer = 0f;
+    //private bool holdTimer = false; 
+    public float timerDuration = 60f;
+    public int grade = 0;
     public float moveSpeed = 10f;
     public float rotateSpeed = 120f;
-    public TMP_Text scoreText;
-    public bool win = false;
-    public bool lose = false;
     public PlayerController player;
     //public EnemyController greenZombie;
     //public EnemyController grayZombie;
@@ -22,12 +20,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = timerDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
     }
 }

@@ -152,14 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97215e809b2cc42b385fd9bf359f7fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalMedkits: 0
-  playerScore: 0
-  enemyScore: 0
+  timer: 0
+  timerDuration: 60
+  grade: 0
   moveSpeed: 10
   rotateSpeed: 120
-  scoreText: {fileID: 0}
-  win: 0
-  lose: 0
   player: {fileID: 1192707022}
   ui: {fileID: 751341856}
 --- !u!4 &351694140
@@ -304,9 +301,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
-  playerScoreDisplay: {fileID: 0}
-  enemyScoreDisplay: {fileID: 0}
+  gradeDisplay: {fileID: 0}
   winDisplay: {fileID: 0}
+  timerDisplay: {fileID: 0}
 --- !u!114 &751341857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

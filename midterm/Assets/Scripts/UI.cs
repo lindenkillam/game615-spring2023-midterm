@@ -6,10 +6,10 @@ using TMPro;
 
 public class UI : MonoBehaviour
 {
-    public GameManager gm; //ui must see the player controller to display the score
-    public TextMeshProUGUI playerScoreDisplay;
-    public TextMeshProUGUI enemyScoreDisplay;
+    public GameManager gm;
+    public TextMeshProUGUI gradeDisplay;
     public TextMeshProUGUI winDisplay;
+    [SerializeField] Text timerDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,27 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timerDisplay.text = gm.timer.ToString ("0");
+        gradeDisplay.text = "Grade: " + gm.grade;
+
+        if(gm.timer <= 0)
+        {
+            if(gm.grade < 70)
+            {
+                winDisplay.text = "You failed your midterm!";
+            }
+            else if(gm.grade < 80)
+            {
+                winDisplay.text = "You got a C on your midterm.";
+            }
+            else if(gm.grade < 90)
+            {
+                winDisplay.text = "You got a B on your midterm.";
+            }
+            else
+            {
+                winDisplay.text = "You got an A on your midterm!";
+            }
+        }
     }
 }

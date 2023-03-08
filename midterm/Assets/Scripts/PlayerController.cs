@@ -21,6 +21,18 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.Translate(gameObject.transform.forward * Time.deltaTime * gm.moveSpeed * vAxis, Space.World);
         gameObject.transform.Rotate(0, gm.rotateSpeed * Time.deltaTime * hAxis, 0);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+    if (other.CompareTag("failPaper")) {
+        gm.grade -= 1;
+    }
+    else if (other.CompareTag("passPaper")) {
+        gm.grade += 1;
+    }
+
+    Destroy(other.gameObject);
+    }
 }
 
 /*
